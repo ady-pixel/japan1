@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japonia: Țara Soarelui Răsare</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, rgba(255,87,34,1) 0%, rgba(255,152,0,1) 100%);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc80;
+        }
+        .container {
+            padding: 100px 20px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            border-radius: 10px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+        .video-container iframe, .video-container object, .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .accordion {
+            margin-top: 20px;
+        }
+        .accordion-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .accordion-item-header {
+            padding: 10px;
+            cursor: pointer;
+            background: #f7f7f7;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-item-header:hover {
+            background: #e7e7e7;
+        }
+        .accordion-item-content {
+            padding: 10px;
+            display: none;
+        }
+        .accordion-item-header.active + .accordion-item-content {
+            display: block;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .gallery img {
+                width: calc(50% - 10px);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;
+            }
+        }
+        .content p {
+            text-align: justify;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-top: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff5722;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Japonia: Țara Soarelui Răsare</h1>
+        <nav>
+            <ul>
+                <li><a href="#istorie">Istorie</a></li>
+                <li><a href="#cultura">Cultură</a></li>
+                <li><a href="#atractii">Atracții</a></li>
+                <li><a href="#gastronomie">Gastronomie</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="istorie" class="content">
+            <h2>Istorie</h2>
+            <p>Japonia are o istorie bogată care datează de mii de ani. De la începuturile sale ca o colecție de state feudale până la ascensiunea sa ca o națiune industrială modernă, Japonia a trecut prin transformări semnificative. Țara este cunoscută pentru războinicii săi samurai, shogunii și împărații săi, precum și pentru creșterea economică rapidă de după Al Doilea Război Mondial.</p>
+            <p>Epoca Edo, care a început în 1603, a fost o perioadă de pace relativă și stabilitate sub conducerea shogunilor Tokugawa. În această perioadă, cultura și economia Japoniei au înflorit. În 1868, Restaurarea Meiji a marcat începutul transformării Japoniei într-o putere industrială modernă. După cel de-al Doilea Război Mondial, Japonia a devenit una dintre cele mai mari economii ale lumii, cunoscută pentru tehnologia sa avansată și cultura sa distinctă.</p>
+            <img src="https://media.mythopedia.com/2BMQz4nJ3n6SQOFqvr6aiB/55b176a1d04cda1e6d5bdd6a3bea1c71/amaterasu-japanese-goddess-of-the-sun.jpg?w=1920&q=50&fit=crop&ar=3:2&crop=faces,entropy&auto=compress,format" alt="Japonia Istorică">
+        </section>
+
+        <section id="cultura" class="content">
+            <h2>Cultură</h2>
+            <p>Cultura japoneză este renumită pentru unicitatea și profunzimea sa. De la arte tradiționale precum ceremoniile ceaiului și caligrafia până la fenomenele moderne de cultură pop precum anime și manga, Japonia oferă o paletă bogată de experiențe culturale. Țara este de asemenea faimoasă pentru bucătăria sa, inclusiv sushi, ramen și tempura.</p>
+            <p>Japonia are o multitudine de festivaluri (matsuri) care sunt celebrate pe tot parcursul anului. Fiecare regiune are propriile sale festivaluri unice, cum ar fi Gion Matsuri în Kyoto sau Nebuta Matsuri în Aomori. Cultura japoneză pune un mare accent pe armonia cu natura, lucru reflectat în grădinile tradiționale, arhitectura și arta japoneză.</p>
+            <img src="https://zilesinopti.ro/wp-content/uploads/2022/03/japanesegarden.jpg" alt="Cultura Japoneză">
+        </section>
+
+        <section id="atractii" class="content">
+            <h2>Atracții</h2>
+            <p>Japonia găzduiește numeroase atracții care atrag milioane de turiști în fiecare an. Reperele cheie includ metropola aglomerată Tokyo, templele istorice din Kyoto, peisajele montane impresionante ale munților japonezi și plajele idilice din Okinawa. Fie că sunteți interesat de arhitectura modernă, istoria antică sau natura spectaculoasă, Japonia oferă ceva pentru toată lumea.</p>
+            <p>Printre cele mai vizitate locuri se numără:</p>
+            <ul>
+                <li><strong>Tokyo</strong> - Capitala vibrantă a Japoniei, plină de zgârie-nori, centre comerciale și o viață de noapte animată.</li>
+                <li><strong>Kyoto</strong> - Cunoscut pentru templele sale istorice, grădinile zen și tradițiile culturale.</li>
+                <li><strong>Muntele Fuji</strong> - Cel mai înalt munte din Japonia, oferind oportunități de drumeție și priveliști spectaculoase.</li>
+                <li><strong>Hokkaido</strong> - Renumit pentru peisajele sale naturale, stațiunile de schi și festivalurile de iarnă.</li>
+            </ul>
+            <img src="https://uniquevenues-en.metro.tokyo.lg.jp/venues/21606/images/mainvisual_19.jpg" alt="Atracții din Japonia">
+            <img src="https://i.insider.com/559c2ccfecad049a5afc8f85?width=800&format=jpeg&auto=webp" alt="Atracții din Japonia">
+            <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-mount-fuji-free-photo.jpg?w=2210&quality=70" alt="Atracții din Japonia">
+            <img src="https://www.ro.kayak.com/rimg/dimg/9f/ba/05993798-hood-219991-16d629bcb66.jpg?width=1366&height=768&xhint=1365&yhint=1445&crop=true" alt="Atracții din Japonia">
+        </section>
+
+        <section id="gastronomie" class="content">
+            <h2>Gastronomie</h2>
+            <p>Bucătăria japoneză este recunoscută la nivel mondial pentru rafinamentul și diversitatea sa. De la sushi și sashimi la ramen și tempura, preparatele japoneze sunt cunoscute pentru utilizarea ingredientelor proaspete și tehnicilor precise de gătit.</p>
+            <p>Unele dintre cele mai populare preparate japoneze includ:</p>
+            <ul>
+                <li><strong>Sushi</strong> - Pește crud servit cu orez, oțet și alte ingrediente.</li>
+                <li><strong>Ramen</strong> - Supă de tăiței servită cu diverse toppinguri, cum ar fi carne de porc, ouă și legume.</li>
+                <li><strong>Tempura</strong> - Fructe de mare și legume prăjite într-un aluat crocant.</li>
+                <li><strong>Yakitori</strong> - Frigărui de pui gătite pe grătar.</li>
+            </ul>
+            <p>Pe lângă mâncărurile sale savuroase, Japonia este cunoscută și pentru dulciurile sale unice, cum ar fi mochi (prăjituri din orez) și dorayaki (clătite umplute cu pastă de fasole roșie).</p>
+            <img src="https://oryoki.de/media/image/news/55/md/miso-shiitake_preview.jpg" alt="Gastronomie Japoneză">
+            <img src="https://www.allrecipes.com/thmb/xWetQsyyrT2R0V4hgS00m2961Hk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/129467-crispy-shrimp-tempura-ddmfs-4x3-1279-0d2e8debf0e04481acb89f60366bd405.jpg" alt="Gastronomie Japoneză">
+            <img src="https://static.mega-image.ro/site/binaries/_ht_1630073544121/lg/content/gallery/image-components/mega-image-romania-ro/articole-inspiratie/sushi/sushi_image001.jpg?imwidth=1000" alt="Gastronomie Japoneză">
+            <img src="https://static01.nyt.com/images/2020/08/16/dining/kc-salmon-yakitori/merlin_175275564_d6ed320f-e036-4b38-b5bd-f90980d001a4-superJumbo.jpg" alt="Gastronomie Japoneză">
+        </section>
+
+        <section id="galerie" class="content">
+            <h2>Galerie Foto</h2>
+            <div class="gallery">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSExMVFhUXGRYYGRcYGRobFxgdGhkdGR0XGhogHCggHR8lGxgYITEhJSktLi4uGB8zODMsNygtLisBCgoKDg0OGxAQGy0lICUtLS0tLS8tLS0vLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAEBQIDAAEGB//EAD8QAAIBAgQEBAQDBwMDBAMAAAECEQMhAAQSMQUiQVETYXGBBjKRoSNCsRQVUmLB0fAHM+FDcvEkY5LSgqKy/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQIDAAQF/8QALxEAAgIBBAAEBAUFAQAAAAAAAAECESEDBBIxE0FRcQVhkaEiMoGx0UJSksHhFP/aAAwDAQACEQMRAD8A8YrZdkaGDIezAg/fBFTNvVFNKlQsqQFk3VZuq9h1sMe/8Z+Cv3glP9uKePTJAq0JGtSPzBhYzeJIn6Y86438E0DmVyuXanSrhdOl2YrWe5lTfQSo1dV5gJBUjDODXQ0tNo3U+DsjmfFo5DMrWrBFqIpLK0gqHQkjSwiWBEMDa426/wD0to8Qo0fAzGXdaQJKPUeHURGgUo1RI6wMI/gT4g/Z88MrWy1LLFtNMhKI169N5fXqhiFNgwuNt8ewEYdUW0op5RRGIsuCNONFcEvQE4xQ6YYtSnA708MmI4gJGIxgh0xXpw9k6IgYmBiQTGY1mItjdM4i7jbG6e+CYvUYmoxpRi1BhQ0bUYtRMbprghEwB0iDUxpOraL+mOYr0wWddTQQVkTENqiY66VYkDoO2/YhbY5njmVWm5edINxCzEL5CwgG+Ax490IOJcXTK5d6p0xQCgJquSRpVSTcnVpkdu2C04Y2Uy1OkYJK62bYVHYS7GPNiY9O2OK4lxmgterQdQ6ItRtWjWpqaYAAFp5oJsJ6zjsfhP4wrNl0GbpDxAdI02BCqIMsTJIkzaYbaJxNNXTBb5YCM2lWpSBCM0xqaL9hMDex+vpjoeCZI0EOuAxjbtFgfOZwTT4hrQMBE7f3xRUJNycUSBKT8whq2IsdWxxRTWTgxgCIgHBAsg6JBxGqC2Ks5Wop/uVAkdAxH2B8x064WVMw+hmFZ3UuugUwqkAwRrYr5jby74xhiaYAn7GxwIiacx4jfnQIlmJGmWYdgDb1woztTOVSyghAdjA1AE9SHtHp3xRmM1nKc6qlLm1QCrMyk9RpaALAgdjggocjMEoXqjwxc3tA2BNzc/1xz/G6KO6moygNARuYEbc28H5iSDAtinMZ/MiEVkciTzuqtdhuJYEQbTgDjHE6jBdSoHIIYU6qtqUGWEEDmKiwmJtInBsSWBjw8OapYkrVYXVhYAieYkkm9p6x9LMxSrKQWuZnXdgo2ssTJB9PMYhT4rRUsAfmK/M4DdribX3M9fbEuKcbUJU0rqAB/NGryTqSehANyMNg2RZmeKgRq0sZJuuiNJ6ECdz/AJvijMUyW0q0FwWepOhFEDkDCWmSLGdiemI0gKQ8RtYJWSdDEQDa5iVAJIA6m8kYHpl9vDqc51trAOxIvLSIH8o3OBYMMeJmgnhpSpyC0E+IOWehg/8AG0bjFeZ43DQhUAW5ydU/fCf9oAclWAAAYxAUTKyLjcCJPbAdbilFDzMwJvCxAvFiAZuDecHkLSPWvhas70FFQoxUBQyliSAIl5UQ31x5V8d8KzeUzAzeaqDMU1J0ME06/wD2apUcpIEAjv6jHb5QeG7FWkcl3IFJrRzFYAsbDT9Zx0DV9aslVFKmxVgGUjsRt/ntiTiysoqSo844xxbIcQytJvCLPTKyvipTzNHSNtRnWpizW2GojHTfBfFvEOlOIpm6YX5HQLXXYyWDcwAMG3vhr+7sorB1y1AOogMKahgNoBjFFLhuWSp4yUKSVII1qoVoO9xg8RVadnQ+JacaWuDY4VHM+eNDMY3ApzHLMo64wVFNsJxWxtauBxNzGr0MUvlsZk80SYOD3YAYGUNSYAMvGBa9KDOCKtYkxBGJHIt3wUxWr6F2i+CqNLrgpMocXpQi2C5AUAVUxMQLnF70bYWV5FsZZM8B6ZtNsW/tKxbCRcTzGZ0IW2wWksmUm8DOpxULYwN5JsNpF/PbHH8e+LaVRPBoM4zLD8MFDp5w5VtUEbU2Inf7ivjXFlkhoggqb6SCYAgxa8ifPHN8N8R89TriuwVKbWAUbKAogrDaoCsbHTsQcS5Wyji0vma4fwlKaIGAchSLgQzFpLsOptP/AOWOh4X8O1GYOw8NBG92IknlsY3O/cdrOuFV6VcGoKQBBiSo37esH9b2w0InFFBCynWEqLadMCANhti8ZcnA2k9OmLGzrAWAPeTFvocMxFXmEploxGtm0Q6CwBiYNp9CbE++FeZ4qVsQRN5sR80RPeL7Y1Xz1NwVLIw7GGHS8dYkYWhl8jebzTkEimVI6vp7TbSSTe0YTZvMkkirUqFYOoIog9ekmIMe3pjK2aqAFVOlja4tJUAELMR8vUR12OBkWZAhZsdRljJ21TCg6jMCLddsax1Euy1AspcU+VgdIJljOxBZpWR798BHL0LwhZtizkm5OwEgGLSYvHXDPxfEgdJYs823kwWBtfb27xvM1ABzNK3tEMPc27iIG4wcCZ9APMKBcUSII0hRBa43AsB64g9fnVmA0hXUiR3WAQeu8e+JDMMDKrym83t0AN9tjvaMK8xXJZTcAgiTICgQdQN17gCNyMFyF4epPP0KLkOypIvLIkqDcMGvzWAF/PC3wqNYPLVULSuqmJ5WEGWdWUGD0IMztgzJPLMTTJ1GEvMwQGLtE78pHeRB3xe11KsYsfw11MABvqJMxFo0zvG8YHZnVUc9UzgVaKZhmV+ZUrcwSoVjQTdgrRBjae9jhgSS4TwyTygKCYJMktJUgLa5i1h6l5pETTrZ5HKF1HkAveTc73EdN4nC6rw7S5ai1UuQVZhVBVYubMdN4uFPlIJwciZSCq+Up6ZqVEU+QkSBY3AYi1jJOAM2FqNNRdRA0gsN1G2mZOm/l6DGqeYfwicxSSmQejqUg7vq1BgLQBG15M4c+HQe6rAsOTSFNt5KmbEXwypgpietxKvlj4RpgVSToAchGYtHhqRAkyQZ9cdpwrN1XUCopRxuGg6rAyhDTHmRjZydKsG0mabCDTdZWehFwRAkYKywZVVSiwBp5TsAIETvt5e+AhqZI4gQcXkY1pwbBRRBxsLghUGLkpg4DkFRAwhxYoOGCZYYkuVvbC8h1BgK1IwxyeZ74qq5XGUsox2wrphSaYw5D2n74wOV3Ejvgb9lb3wVTqEASMActp3E4s04ymZ6YrYONojzwBbJPTOBc3RnpizSZ5mxKrVkctzgmF9XKAYVcYoEqIBmbbdL3n0wy4zxVaCAtA7k7DoPuftjkeK/EFd08LWoR1MuFlhNoEEGAG3/AJbgiQRKa6DGD7QpyFJcxm1WopOhiSHMBtLWGmecayp62UDY27IcEy4qNV8Ma2BB3gA7wuwmN8cFTyi+ODQWp4iQEjUw2gkzYatifL6+l5Euaamp85AmwBnzi0+n0GNp4BqJrJUTGwAHYC2JLVOLqoAwJWqnoB7/APG+LEQk17b4qq5kKDAUx/Pf7DAjzvrIHlpA9yQT9xitqCsZNS5gfMvTyEXxmFMHq55m1XqKL7adIvEarH2tvvgWtmKW6hpmOQG23UBrm8i/TvJLq5ZAZ0hpIlmJbYkWW/fpFjjeaYSBpUHaBFt4O3n52P1my6z0hDV0q/ia2OrSralIq2trjZ9oIiYAwbqGkOjfh3ggcpF4LGNzv7nFdXPKp1lQYBvJkC/SZU6e0CCcCZLJiHIZlBJfww1QxqF9RJOlrbTEkdcCzVTyNaVdOghoBkiSBG41fKZmIgfYYmBTgXiYlRMd5J3Yze0T2wjp14LOQfD1AjTNSJHzNpVipLA3IIHLti3K5tHUMrpWQyWKXIAJF7kE9/XBRrixlWzVMAMh6PBUzMg6fy3MX9jvgfwgtKal3b/pyRpWDAPUx+pJxLKZbWW0j5ZWWJkRE6dgL2kRzemKK1Fq7eEiaqSaVLioCpIldM7k2IaNpEXwwmLB8ukjRTAUHlMjUVk63YgWmCo6Fb9xBGbdSyrpj5YCqJJDajP54IBMSDf6w0qqmmKYVVmflHNcEAdBebd+s4m6qHVeVQBvpVmvBJOoEzywJ7Tgo3ElQylLUEb5VXWzE3LG3hsseeqDJMCes35rPUl5YbUBC8sEdhpAWRE9e+FWccKddPQoMEjmM9Jb+Ykk8oxN5vUOnmtz7k9+5kyLwLD2NipFdemx+am0vGywwG/5mYCxEwvYThJT4ZRQsPEzdLmJ0U2KpfqAnKPbth14hIOomkpEArckggWHWPXF4qU0ACsXETrcLLeY1Lt2i2NVitIc1eGVqJLUW5DMr/D5gG1pt6Xw3pgkBu99wfuLHCXgOd2VarVLXBBhSBaG5rAAiSYMi4Jv0dMR5dcC6HopA74l4U7YvEdTi2lRU9cK5BUQdMm3bBK5A9MG0hHWcXa4wjkxuNAVLKtscEU8ti1K2JtVwDZK3yxxKnTIGJpVxJqmMC5FRGNCOoxaWnEQk4Jr9Tdj5Ykqz1xhQYj4c7HGFsrfIzcHEYI7AYuVCMZUdcYKZz3xJwupWpnwiA8HcxP+X7euEHCPhAml+NqpVAzaSp31adVpgi1trscdvUqAbYAruTgqObGc6RXw/Kpl10C/cwJON1c10GKXJxSww6SJOTZZ4s74iyrE/pisDyxDMExYMevLE2PS8zhrFokxi4Hfc/2B8/pgPM1SRMi8xDMI3ubA7Xg+eBa+acEAgm+5CyDcdGBkgG4wJmyJIZmZh0jm85mw9b+uJuRaMEskM/ntB06hJjY/NImd9jBHtgavm6RGhq+jqdOkse8mwH2364tpaaa+IlNVO7FtIZj3iJIAB6xY3JwVkaa0l5+Z7sXYiVY76RHLB6/e1lSC5SaoSZ5lKJpyzmlql38ITpF5YLuCVjvB6b4vpcSUK2lswqrcCtTcLGoxpRlk72g77Dph2c01QawoLA8nMNInbzJG8ESInsMRy9QnMhpDFVCFohQTN1N7mALRNx3h0id0Ja+ay2sVK7n+GdRpwCQRrYEMyAgWJIHbBme4Xlaqiu1QOsggkUqlPYRz6THSwbbHTI/TYn21HqREz+uEOZ4Pl4eqlIo7B2OjUq1JkgVEBANurLbB40LfJ9HLfspy5OXp5g0sw7habBm0FWJBY0/lJAVhqsR37dnw/LrQHhodFNBtAUiFjTcBTYEk79e0cl8PVq1bNF3psgVSlNqog6nXmXVOkyATAF/rjqKdT8+iCebXMkbOLnpzdLCcCI0Un0UZ5QHXQ7tY7C5iBEgAG4ucL6JVFJZWNT8wDWtJjpqgbm4vi/OZ+JPbe8wJkhmIjpt54nkeG13BcU1TUN3LK5m+2gnY+0RjdlG1EVcTohSdbC5IkGRJ/ICSJkz1/XE8lQWpzGs+kW0kKbbmAykKfI4a0sjUYMn4aFDpYFoY9VgQRDbg2n1EAalwjMUlNanSVwy3pzDiJhlOx6iDuCLiIwyJyaeQNqD6WClHg8qOAZtN2iE1XECNumBDxU1YbxFJi4FJDpP8Jk2I7YNfOBAQjGnqPMpBDfSII3giRvBN8Zl6WSAPi1wrmCb3aw5iZuZkSb2xhfmPeGcGQVH8QqjEzT06lKw0SgIIKixBiJEQIx1S0wiR2J5jAmTuYEbnDMUB/m2A6vDabSoYobT4ZK+UwDHSNumJNtlVgEdcQLabkwOp7YRJxUVKrJTq+JUSx/DZA2k/I4YAs5ieX9JwflUr1IFRU0ALytUggtYSArCdzfbvEkpFyTyHDWAx+Jqgk6olVmDEtAAHe5At3xc+fjcx5GQe8Qb7YGznDCQRoI1EMHVmbSw2IIANp2Ig3nFHA3qkOaiiVJQoLICLncWUzIJgxG+HwCxiM0Di0ZgdCcB0+IUCTTRS7LYqg+UxqhibKYMwTthk3Dh0xrRrZlLNd8ErU64oTIeeLly8Y2Bk/UsWri5WxQE88WKuABpF6nE1bAwxRxLiNLL0mrVn0U1uzQTHsATjEmhgVJxzvxhxulkUpPUIHiVaabEnSWGtgBvpST/fbC3iH+p/D6aylXxWNgoDKPVmYAKvUm5jYE2xwHEP9QddWq5WjmGZGRWeTTpyRy06UTogXLQ7mCdAAULKVCcvRntAy4IBBBBuCLgg9QcV1cl2x4xwv49q5UTl0q6RepQYF6Kj+JHaHTvBn/uOO6/01+P/AN5NWpVVVKyEuqr8pp2G5YksDvYC4xo6iYfEfmdDUyZ7YFeljoaiTgTMU1AJaAB1JgYpyHwxMafliFVLbA+sQPr1/wAkY1nOIaCPw2MgxykTG9z0vvhP+9mLAsW0mxEDSCIIjmBsYvIBvbB5BUC6rTZhbnuwZdUWXqCOVbFTe97HA9XLIQBTcSJBQmTqN9MXK2IMz/U4g+faWIEnVJW5jYgkiNoidto3xTWzJqSwpyemhYi0nZT2mfWdsLaKJMW1HNMfiGQxIH8AUEAKSBYk943PubmXJQupBMAggg3ay6e4mLR1wLxTL1ETXUUJTkAyQCCRN52Mbn+YHuMCBqlNVrUstUFMkrpYLyjSPlOqZv6dIXAToDkOqtGppUKoVAq87jmIKkatINusbwWEYnSpVdYCMhnqGmI0s0xtJVgCex6RKeh8QgutM+IpkaUZYmBAAadE2PW5Pnd9lnerZQVK6tIam06wIYH80cx+aZ1bHDKQtIuWq1VCAJOmQRsOWRe5JkjYT6WOBqlPlBBoqoiW0ndbWkE7zciLAXxnEF8BSz00ZYMtqaUYDmvp5SWY23274YVeGClScourShUyxMqnUEkPAk2vtY9S1gWDzz4Lraqdd0d257AJGmEWwEyFUkQSR7Y6igGA8OsWRREF9SahpiVJXSSBEgEk4VcArLTr5qiQ6+BKhrDW2opqkBZCppuIYhhMdT8zmgQygAsxkkAtYTEW5YsdRINhthU8BisYJVM3T8SlpZGYVANJqLBAVtLnSBpGorbvMA2hvnM+yxq1mDzFF/DU2hSxu3NGw77Y5WrUHynUqmA1hBjyWTt03/TDChxikFAc3AVafQ78oM9L+e+GUgNFnGaXi/i0dQM6TYc4kEozLUYjoJIGkme4wH+/VphlelUAWwBaQNxEqx5otYd7jBOZoq1Oo/iAGQEXRyk9TNtQ22079Zwir6W6rSAFwAjMwB366BYXmb4FgaomK6V11VL6SQiSVKiZmd1JidNrb+S81wI5WPnLk79TP64zNVU1liAJAmAoE2knmuY7Y0K8fKzR6K33ntGDYrPal4us6WR082WF9dW29omcJPi/jmWpZaow0MwKgC4POwBKkFSbGbMJvfGZji/D6yksdVpiSSGgGAAYW07efnPL/E2Ry9QU0oFKa1iFkO2sAsoZoNtQBdvRBETiY8mqAPgyDXp51ncq0uV1BmmCup5Fht1axF+uO0zNFGps/hsxbU6sFBUKTYwoLQd9ovvc4q4ilOklOgtBqYmFiwCAS25k8pIj8pYdrsaHFaZUhW5jEA2W52AkmZBAAtsfPAaBFYCeGrSVFKXUzI1FtpkgXnb2BwLxmq37SaNAqr1aU1HP/R0MFWoAVILursotfwx0U4RZjNsGNVXCsk6iQVpsADZ52G5BN57QcW8A43p1VWXU9WJIOwEBKdxFgNpG7Hc4FhcW+jqeHZdKKimtJlXvO5N2LkmWYmSWO+GgIUWED6AY5/McaSpIClArS7soKpbffeSNgdNyemDuH0hNvIERYxGxsZ3OMmL0hqvkcWR5Y1l8uifKAJ7C2LjHcYNiuRUE8sTVB2xIrjQQ41gsmKQ8sUZ5qAVlrGmEIhg5XSQehDWjF2k48z+N/wDSxszUqZrLZgpVbmNOrzU2IEAK0ak2Frj0wrEdiXP/AA9wNc2z5ap4xKP/AOjpDxFLEi6PdUAvIJgAzKhTia5erkWXx8tRqU1AcNR5zQJUgK4jVp3GrrvJ2FfF/hRaNCq1esaOVGldGWH41ZmMCnVqOWLXiBIW+www+EfhfhjxmaNTONUQKCWqEVFjSAhKqJERaYgdsckmpZoquUMEc/8AHeQAaKBeQw5lRZEDTLM8iObodxjzbi3EqKZkZrhzNRenDwSLGwISJ1gzcHcHHpGb+DqNfOvUqszimwpgaV0w50qWIWXMzLEk7Ttjl+N/6bk5r/0lSnpYaqYmRKi4mTaR2MasLCcE+qDOOo16nqH+nXxt+86ba6LUqqAa45qZmwKt0JgnSdu5x1bZZCdREnubx6dseQ/6f8cpZXOvQejUy5go61GBLaipp1JACgagyWEHxadzj0XifFwy6aasSeoYrA/7gf0nHbB8lgnFM3xbM0ihLsGA/KuoqbzBZSJnse+OXz2fEKTSo6ROoLY3N0NzcwesiD6YaDJ1XK6zUcAe6m51FzE//Hzxz2cIVyRqqQYTqzEjTrnqbsB0M7WszLwB87WpAyFrqTOnQTEzYEu23kD0iDgKrnmUqrByktp+ViuqQFKg2NruAwHXThhleEnxBqh6hLBaYLaBAiW5DJnULztMRck5j4c8JwcwdTMvMbCmoMAKomTENvM7RBnAC35ICWKrop0hIAkFqjG2qNTubkz33x05ztHwyBrSob+IAJGm4uWYxN9+mFFTgGXYIKJfUs62ouwC/lBEQpG8CRJEX6LKeUrXBqAIshTUg1H0gk1JAMArG/cb4ZNCNWx1xHPpmVivRWuuxUSqaogtpgkm/UiwEd8co2YzIqhMi7tCGV6LsoYsxMCwgC8ggbYvymqmr1gxKgqoWosJJEACqDNyTaLz6Quo8Uq5fTRqZMeO1Rz4lJwxMxCBDHKEECSfkBuZOA2jNUGVf3kxK+JQpmSNOlqkkjTsRBOmxBnzgjA1UZ/Loa2ar1awAA0pYEBYEkQRBETDdzEnBtD4uyjNpH4ZAXWaiMkxuG5jpEGCTewxunxVHZnptTjqZDACNtIN+t/P0jWmMknmzm8rxAH8amzoQ0VFqMZVAtuY7XPqf06LIZpaqlqZTSO2m5B2ECfrOFfEuH0GTTWYFHXkYCTTqaYIBUAkAAELMfNvbCQtmeE5gMrs9EmI+U99Dj8r3t7+mAsA5OPfR3OW4TmHDOqtEc1tMj+K8C09fOx2wBXyZWmTBcLP4ZXlOxvUBP0jqPTBmT4141I1UqMQxvY6htYid5Pc2HXfAlbNTOpl0z/0+YFh01AG/kOvfo9j0hdUrBhCBl0zApjfYRoIsNX/AJtgCtnatL/cVmsN1K2iR3Xt+acH8QRzTarSTSaZkgGRU3tVWYmzANqL39sLctVoZmoRSRlIUswPO6noANP5YYm/5l7HGsjJuwpaqV4J0ksCNM3kAWJkaSJmOsY5vNvmKLsipVcE6tQBIv2jYeXrjpeI5SkI0alqATqp7tpGkzuOpjUTEjucLB4h2aiR01PoMG4BXSwG/f2GNYJIcVOPqqmotMJUpgsjrAaQhgNygReY0mfXcThPxEa2Y8WoASgIEiU8gUHKIl+nXzMquJVi6m1NwReZBA7g3v64WcGqCmNVQNHRTAtAPyzJJsRYzAwlg5ZPaspx+m5apmA7VCBypZUAmAYnqSfUneBiNbjCmoa1Ac4ksXiGEEwJIj1jpaxIPBUM2EOiRpiQsnV1P23ntGDMzxCmtPW55J1EySAYAgAeo+mAzoSQ7zvG1zNVaBdxRcK+YgFalTRAFMwfzkXIN1Vh2w5zOcoiBRplWgwWOmNrldiBaR1t6484pkVCPBqzdYBLAqBABKRFpMDrJM9cPcrVrAAtVQ7iW37/ACxYmD/zhGx4RTOgq1NtRDXPLJEzck+ZmSfPEcrxIpal0tC/QSfS369MAZevqUHYTbULHf33m29tu9wYxoKlehj5SDFrbTaxjc+eAmUlFDrLfEdfWoWqsNJC1LzeI1G4vYX9OuOlPG2WFqLodhygCQ0bx6eeOHyeSWXDFUBgm5Ja17xCbAdd7RvjeWziBmnXsBAZio2FhqIEwCYHTDc2S8NHpORzbOoYAEHF/jVOiY5bgHGqVEEsx0NEQGMGLz0BPbHQtxaho8TxVCdWLAKOlyTa/fDrJCcafRznxr8T5/JhTQyTVlIOpwGfQbQCiwbyevTHntX4x4rnVY+OcvTU6XMJQRCdg7sTUB8gZPbHstLilNlDrUUodmDAqbxZpjfCnP5GlXZqvhirqUkHUIJWFVfe9+kYlrScVaFWmm8nlfDfiypTr06ngZriGksTVNN1RSw3oU9MapiajiYkALOCeC1s1WqGp+yZvIVnmalGlVOWa881MjUh811CZOkY9cy3LAVVCywFm2jl8pnfGHNEAS1EWpTMxOr8UX/l+Xz3xz8sYA1k8F4vkM1+0lABXZ5ZqkuVBJuGJ0w3cEA+WF3EDncg9OtyoFcFdGoKxEEqbk3EjpOPccrkQa1RgiFS1UmVJOqRp8ojVPtgf4r4alXLx4aFxp25VLgbSOk+8YTxp+Y/hL9TyrgGcqVaq5/UzuC8+KdQbTNX9nTVI2BKrvImwGPeF4jTgMiJBAIPcESD9McF8S/AuWr0abIWpPT0srpfmtcrOktYXsbCSYww4LlloUhSWqz3JGokaZ/IoJ5VGwXHXoS5g4NdnU57iqtSdSCJUiV6W87fW2PPc+5L6iIPMIUSBJJIE7Wb0g46epUIEl1A8z/hwgzoY1DAEaiCwW0zcyBcnSBa+LtIeC+QfwfP0qFLXKJU+QEKCRMMyjYc5E9p98T4vxUvI1Kw1aoLtYhY5mFl5hOlRImQb4WeE2kPIUkHnvMAgCJkqCe8T9sQzKnWECKrESxqPpH/AHggkxv3JtbrgUg1Tui3NVjU1szPz6bI5VAoIlejT+Yy0TFjcYhnqiNTgqNIjkCq2wj/AHPmNiDE2AjsQuyVeg9Qr4tMhZDEkaJN5Uy2qBB3nUT7V8XRmP4ZlTqkqQTEmAPMg37XwKRlx7QElRWrKIZlT8QBiSNWnQbTc2mZmwwfUIdWcSHFSYkzCQpVZ2mD3iemActWgDSsyAt3BtJM77jUb9Y7RjeXraTpYOQWPMBG56EGCb3vefLAsokE+FTrJq0hlYhodVZTIBAIa+xBtHU4V5j4VoMBU8IyLEUS02mWK3A/y2GDBVkozkgayCQBBm0kAqelzG/qMfiVT5QSxvcXid79NzaTMmRe5/D5iuHLs5riXwrQRSafilwYIlSCqm8GLtp9L+2B1+GGqJ+DWe6ydSsUIIJ/J/UWIOHmafUCbrYi5m42JtYkQI8sVZItl35Xa91IB63IECDsI7X8sBUI9JHF1EzGSeDa/mUYjYGRB62IkY7P4b4wma5TUWnUC3R7q990P0lbH1F8EZviFOoT4oV+WHVwCHHn2INwehGOTz/ANP4lCQguJMsrTIANiABF7nDJ0ybhKPTO34nxB9LUmCkTDFFFwYg26gx0t0xz2Ypgv4lMqjR+Ub2nSQgkT3HocZw3jwIFLMLdTesCw1GQQGtym2+x8sE53M07sAEG3Kb9eYkkzuTBHXDXYzpopWoX/wBzlYiNPpzWBiwHXFbsgMFNvNh59GE4Azuh4hV1X0sp5vuTb+9owPWq0yYekhItPJtvN/XGEbCs/n1MIVUszaRI6TzGPQET545vjNHTmGv2Mg9wD/gxvNM6VCwfWVsCJgbWF8R4jzIjkjXdWA6AbT/fzGJsm5WPqB/CpVmjRdCwNlmwDXtdfL5j5YUcX4sa7BVnQp5V6k7Ax36YWLWbToBOkmY84iThrkOHOmiqrIZAaBdhftG/phQ8m8DjKVMwU0O60pkHTGthv0tJ2kHbph7lqNMmirc6AGWcknUTaI2MyZ6EDHPcPprVaWIsYPUkg7jmAj0wzyWWe704hmbZQJF5F+uxiItgMtpyZ0NXNc8DUJAnUJaJ3FhYQL4upMHFyFJJGsXYbAAGLTa439cKMvnKbLdmUKIZQIZfMiAT8jXNtt+mspxalLqgZmkwCwUG0QYPebR064VllreoZxbi37MkagTYRPzWNonlFt/PCY1K9QGrQ6iOUy6WA6gHf+HYnpvgji3D6VYq61xTqx8tSIPowHfYR9Mbo8Oq00Dh6bTbUh2MGARAJsJ2tM4RzJybbBTxusFWmzNy7+ZPfv8AfEqHHqmk0yz+G2nUqkD5b2MGObyxtqatcjVElyCCx/mEXi62I636jCvPoqGVaQbzv17jY3GNyYo9yvxNXVYVnACogHiNACrB2Ny25xVT4vmAoRa9ZUAACB3AAjYCYGE1AMBff/Ppi+lUJ+nTAcmwlj5OlJ5FaL2E3N5nvi3L8JotJNFLb8otPfFmXrBFIkRHXqe+JrWAUQRzXNwetvS3TC2zNIt/ZlQBVGlZ2ix9MToNVSQtR01AjkZgY7WPc4l4gIGo3mek279xviuvWDex+3p7YCbM0qDuE8ezdP8ADqVnemQB+IdRW/8AF80eU4b/ALag+epAYCLe8/WfZcctWJK9Nj0ufM4CRiggEjy6HzIOHi6GjqcVR6Hw/i1MmTDG0SoIB2IYarmR1FrY6/htSioLakDjQdCLZdzzGJiDubLv0x4hT4lUpgTDAdblgb824k+uGeR+NmQwx0wI1AEiCDIZGJkHbDtN5QJasZYZ6X8P1aOYdi1LUxb/AHKczazKSFA02IktJkGASMcNx7j2iuyASpFwCdQFxGvcnmgkzC9BipcwyVQfGBMAo95Eyd+41kCBtjnc1JqsxYXsS0tvYnSDI/4wiTXYXdDSjl1epv4NkZQCeUC3z9TbqJv06NjlKccpKibaQWme0C95Mnz9l3w+eQlzMRpJtYjoT0t8sYdu8bkq5E3ge2xi2KxpFIVVi1hLREA6SxMapE2km3ne0/QSjnAkJdAs3Em3kQSCNJF5G/ng6u/5Y1Azv1NyZNrf2wNXqTBb5oAUCDPQyNjEdcOEofQWLeIJva5j+Y7W+kXwUlS0qGMKZMEbC5W9vTscLzWjchoEAW2n5YJ8sbeihvJWYblBBba5Hn7b4wE/QsbNmCGYg7gGQ2+0Hb328sBVsyXkElRe4MXFhffvtiNeo6jfUe/54sSSDvjWWdYLTIMgxvMWA62+uMTcgLLuW1REqbidJM3B8/tYfQnMZlQQSpvAEeo/+I6/XFGaZTVDIAXEAqI5xc79/PyMxOIPm0ZSwAJmF1SL9GG46R5nvhidg2eyBYsaa6ybsoWZA2Kt77DEMlxgBNLFNJERqYsL7EGbe/TBlDMsgNRoIAW6jaLW6TJI2GAOK5ZGBZXIqM2s0zGm8zzfxbeRvjXQme0PUgiSQwidz28h0tGENavS1GVM+QEbex+uFuT4myDT+W9v1wV+806CPI3wG2+hHOwRMgGuWM9bTfr1wPVoGSADAsDGDQ3ScaTxRtU+5/tiSkejq7fTaSin+mf9gDIQLzhjSzOys2kABbW6d/bti2hUrzepI8icXvUqzymR5lf0JxnIEdl+Fy/F/j/0u4ILnmVSNyxAm4NpJv7fXDXh9cuo1VwpM2mSB0J7HT2G943wjWpX60wfZDgh81WQCKZn+VPIdQPM/wCTAtmW3gu217xY+zeeQsqaw5kiSGOykEiItaDuBva+BKtFpnLrSSRYFkFpuQSNJiCOvXC2jnGWKhQK3UxzD6XxBeJoxJgSDNyRHmBMdT9cBDam1UXmcVefNY+hdXrVKVRVYUix5oDO6x7WF1Pn6YY/vNFp8xAJtKiVItcX3t5D0wD4uqIUnVfSB7m31wK3gFrhlIN1kAA+hEj64GGNq/D5QpRmm2ry0v37GdJKRBhzYazAMxt1INmB2GxnbAFetEAzq6zfUGhgfQdvPfpjVTLUyLOR6qDfz5hjb5VDp0uogAXBmAIG0/XGwTew3H9v0a/kKGeUhl0g7gnrA/KIHLI6+XnaC1rLIgXiBH3G+IrlTYBlgTGk33m8j7zi18sJsrRH8QPWd529sKB7TcLuD+hGqZj+pn+uDspVEAGZi3rG8xtgF6WkSFc9xH2GL0dQQWkRB3Nr77T7eWAyThOLyqC6dYGdIsI09bi4JN/LbF4y+rfexBJi4wJRqqpkn3i3W8C8x+uMfNGBzC/bf3tYYyEz5mhWkBog9QD5n+36YpqoDcep8pv/AExRxaqVDFWdfQAkGwEjtPXfE8tmgyDc8trQ3v8ArOHrzE7Jgxt0wszZBO0YcpknIn5TIADAz9r/AGxTU4OSRLc2qGAm4/lkQT8x36fWkBXBtBfAeH1qihgylSGABueUbRuNremImmqSGprI1HdpvaZJixAsfPHWZJaFIJR1K2lQDB0NPNJk36iPfyhf8XvSciooVSLEK94gAky3lHnq98Dg7LYURHw+tRRi/MIM6QwgCR1Pa/1w+y/ExUIMx1uZkd4P62xzP7NS5yNYEm0T99j164voutL5VcmNyAL7ab/5tgOLXRoNod56ieVhPMAynmFhaf5hYjtY4AbMhb7tYxsDEbD1+588Q/bWMQhsB8zAdJtGqbnAlWlV2Z1uZI0+psSYB63HbDJsdv0LWzAk6lBnrcAaRMA7zFpAGMBUTDKZ6Azt/wCTfy64W5qotME6yxJ6qCTM2tE3wJRztWCGpEncRA94nfDJk+dDPMV3GqCNQgXUMSSYCz6acDVaWtmmoVOkSQFAB9Qb+kdOk4FTNGwFOoea9hNhG+xPvib1fzERvE373MbX/p2wyYrlYOuWplxrqBYHdiCR59LbDFD1dAbSHZTpMkGAZk367zIxZms7p/hKexBne8bH+2JvxIhdLKNBAE9NoP8AfGTJNoEoVQZJJbc6WJgNuI5oIPc3GL8xSeqdKT/MS/IIHfSCfS+BKlMFAUi8gixgAzI6zHvfBeSzqpUOpgRHS46dd7e+CBfMHrcDcAkMrR0G5t0+uFrggwRB898dQ1ZSZDC/Q/UdfXEHparm5wKC4ryAaeRqsJFNiPJScVeBI2MDqOmOiomLBqgH/eQMGZSo9MRTKgeSg/0xLidvjXbrs5OmoFpNsS0mbPEdDvjq8zSaqVaqNenaBpH2IOC2y1JyS2UpMTubyffC0ii1UoJJfdr/AGcjzWhsTU1AOk/56Y6Cn8PUpJqlgDsFgR9TJti6v8OZfSxpvXLRYcsE9p02E9jgI6ZblckouXl1L+Uc1VzVVTKrq7xM/rjY4lVMBqbQff8AUYe5f4XqsJNVKZn5TefvjM58MZmkpqGpSZFEtEg79BG/vgovPdXqcVN+nUWvvkUtmghEjYb2gYllalBzIoUyZ71Fk+gqAE3xull61QnwqJqAWMEW9jv1xF0qpOvK1Vj/ANox9VGAh93qxeq03DH90X+6LMx4RMRoU7gNfzhmB/riP7vy8cj1VO9wj/cFfpgesUOktYG46b/pir9gpkyKjCwG4P8AbGG19OMnGPhxlSXUq+3oGVMiLaao2i6sv/2H3xB8u42Knz1RHsYxlLLQZ8RjvY7Ygpqeove3ft6YAPAhCHJx1I56Tv8AX2CBScR/ueZEH9N8bWo97tHSRBPscVeI28QIvM/0nG6WaLCYMDvP2nAZTbasHqKK1Ze0kTNYgSdBkDp9tsbSqLHRB8jcR74qOcTYwdhdQd9unniaIgJ5QCLG5tN+8YwjU5/lnpy90i+q5O4YeuByoN9cG4/z/OuL2cEAXtiC0VIMtBJ7Ej9f6YKKz0Zf+XjLSTz0n98EWpubqyEx/h2N+s4YcGSCaldtREaE/LN+Y+kkD1wuynA3LAmtSIJE8+mB/wBrAXx1uR+H6DMZDabxpYEnsLPF8Vja6o8x6Oh/Xpzj9/3RXnNLAMKktyyAVgQYgAgx/wA4tzfDTUpxO6wP82HtP9lvE+FomaSilR9DlbsLjUxXY77ffDKr8KOphc0N4hkZfupPQdcOtRvtA1Njt4pPxGrVq1YnHDWQAlCNNryYFusbdb+WKs1VZrg28uvt164Z1+E5wjSaiVADOnxCdusOBhXVyVamL0mA/lhh3tpJj9MK5fJk1sk/yakX9imkrrtI63kntvirP13UAwSJmwlvIx69ftiTZyxUkgGJG0iZv7icUl5/Ptcd9uvQ3/r3wnJGl8P3FYV+zQLTBaGYaWBmYk3/ACnrFxYHv3xdUe1jbp/56d8SFInqJ8vWcR8Ig7H/AA+WByOaW1149wf0KHEzeALx3i/3xY89LCL4rrqYNiBB3/tiupWkC82wTnaa7Bq2XVjZY3MAwPS5wN4CxfUffF1R5mTfFL1Ce+Nb9SLLqNVVI5RHbocV5rnaTCgzDaCNW1rT6YpxFDFwf8PkcPEyZZUUodJabWPQjp7YvpV4AEi3+d8UOFbflP8A+p/t9MVwRtOGszOto0xO4PoJ/phjQdosjfXG8ZhJHVEMog/mYKfMBj98E0mWJLsw+39P0xmMxNrBRPJesj5Qg9jP64lrP5isduv0jGsZiZSzYJI5aTH6AfWcafLMw5oAPYavqTbGYzAuhy3KxTB01DAN72/ooxYeJNbSVb7j+30GMxmGTYrqxbkuEprapUXWWmQ0FbmTYi5nBOZ4BkXHPQQdolI9AsHGYzGU2NqfjdyyIeKfD2XpQ2XFUsTBXUWEd4i2w64oofCOadQ6VgCfyFZj1YG2MxmKLLC9acNNQi6p3i0U1vhziCSRTpVAOqtH/wDUDAbJWEitSamYtNwfQ7f+cZjMGSR17Lda0tWMZSbWe/b6gDZmg1mt0vqH6Wxei0zMPMx+YHbyxmMxqwc0NzDU1OE9OL+dU/sX0qRH5iew/wAOKK61NUpfy1AfrjMZhbye+tnDwfDg3FXeHkNyWXqMrFhPaIkX6gb+2C6OQJ/MB1BxmMxeEYyzR4u53G42suMdRv3yZnqdSmVJfUfym5Ig+e1zhieJ51bGGEzspv35bz543jMGOmnJpFdX4hNaOnKcVLld2vRmk+J6i/NTX7ifO84kfiFG3VlPcAH+oO1pxmMxNzknVnbpbbQ14cnBL2FebZGnRUEE7PIJ8zYid/qcBNkyAYAY9wVN/IAg9t/PGYzC8xZfC9H+ltezF9ZKqm6sB5K33O1vTE1qmSJgjpONYzAkkeXuHq7eVRmyZruLzjQed1X6YzGYR46KbLdamtqcNR2q9EVNUpdaYGIlaB/iHvjMZgkI7iOpNxlpx+hA5JDtU+o/5xE8NM2dSPvjMZjKbOtbHQmvy17Nkf2GoPy+4I/viPhv/A30P9sZjMUWSGr8M045TZ//2Q==" alt="Imagine 1">
+                <img src="https://img3.stockfresh.com/files/f/fatalsweets/m/42/1703456_stock-photo-shimogamo-shrine.jpg" alt="Imagine 2">
+                <img src="https://travelator.ro/wp-content/uploads/2018/10/japonia-850x450.jpg" alt="Imagine 3">
+                <img src="https://www.infofinanciar.ro/wp-content/uploads/2022/06/Japonia-sursa-foto-MDLPL.jpg" alt="Imagine 4">
+                <img src="https://www.maxitourism.ro/poza_japonia-culorile-toamnei-avion-12-zile_large_circuit_831-58130.jpg" alt="Imagine 5">
+                <img src="https://topsaloane.ro/wp-content/uploads/2019/08/8D6C4361-3B4A-4A38-9DA1-55AA84281CE5-400x400.jpeg" alt="Imagine 6">
+            </div>
+        </section>
+
+        <section id="video" class="content">
+            <h2>Video</h2>
+            <div class="video-container">
+                <iframe src="japan2.mp4" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="faq" class="content">
+            <h2>Întrebări Frecvente</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        <span>Care este cea mai bună perioadă pentru a vizita Japonia?</span>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="accordion-item-content">
+                        <p>Primăvara (martie-mai) și toamna (septembrie-noiembrie) sunt considerate cele mai bune perioade pentru a vizita Japonia datorită vremii plăcute și a peisajelor frumoase.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        <span>Este necesară viza pentru a vizita Japonia?</span>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="accordion-item-content">
+                        <p>Depinde de țara de origine. Cetățenii din multe țări pot intra în Japonia fără viză pentru sejururi de scurtă durată. Este important să verificați cerințele de viză înainte de a călători.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-item-header">
+                        <span>Care sunt unele dintre cele mai populare suveniruri din Japonia?</span>
+                        <span>&#9660;</span>
+                    </div>
+                    <div class="accordion-item-content">
+                        <p>Printre suvenirurile populare din Japonia se numără kimonouri, obiecte de artizanat, ceaiuri, săbii de samurai, figurine anime și produse electronice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <label for="name">Nume</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Trimite</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Japonia: Țara Soarelui Răsare. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const headers = document.querySelectorAll('.accordion-item-header');
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    header.classList.toggle('active');
+                    const content = header.nextElementSibling;
+                    if (header.classList.contains('active')) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        content.style.maxHeight = 0;
+                    }
+                });
+            });
+
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetId = event.target.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop - document.querySelector('header').offsetHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
